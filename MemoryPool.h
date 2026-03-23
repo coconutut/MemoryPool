@@ -16,6 +16,8 @@ public:
 
     void Deallocate(void* ptr);
 
+    int GetPools();
+
 private:
     struct FreeBlock{        //空闲块结构（嵌入式链表）
         FreeBlock* next;

@@ -34,5 +34,15 @@ int main(){
     cout << "id: " << p1->id_ << " address: " << p1 << endl;
     cout << "id: " << p2->id_ << " address: " << p2 << endl;
     cout << "id: " << p3->id_ << " address: " << p3 << endl;
+    delete p1;
+    delete p2;
+    delete p3;
+    std::vector<MemoryPool_int*> nums;
+    nums.reserve(4000);
+    for(int i = 0; i < 4000; i++){
+        nums.push_back(new MemoryPool_int());
+        nums.back()->id_ = i;
+    }
+    for(MemoryPool_int* x : nums) delete x;
     return 0;
 }

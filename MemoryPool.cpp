@@ -67,3 +67,7 @@ void MemoryPool::Preallocate(size_t num_blocks){
 }
 
 
+int MemoryPool::GetPools(){
+    return pools_.size();
+}
+
